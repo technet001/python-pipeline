@@ -9,6 +9,8 @@ pipeline {
 		stage('Run') {
 			steps {
 				sh 'python first.py'
+				sh 'python second.py'
+				sh 'python third.py'
 			}
 		}
     }
