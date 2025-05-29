@@ -1,20 +1,20 @@
 pipeline {
-    agent { any
-    }
+    agent  any
+    
     stages {
         stage('Build') {
             steps {
-                sh 'python --version'
+                sh 'sudo python --version'
             }
         }
         stage('Compile') {
 			steps {
-				sh 'python add2nums.py'
+				sh 'sudo python add2nums.py'
 			}
 		}
 		stage('Test') {
 			steps {
-				sh 'python test.py'
+				sh 'sudo python test.py'
 			}
 		}
     }
